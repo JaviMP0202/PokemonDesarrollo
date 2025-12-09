@@ -39,7 +39,7 @@ function mostrarToastRetro(htmlMensaje) {
   if (!cont) return;
   cont.innerHTML = "";
   const div = document.createElement("div");
-  div.className = "death-toast";
+  div.className = "muerte-notif";
   div.innerHTML = htmlMensaje;
   cont.appendChild(div);
 }
@@ -116,14 +116,14 @@ function prepararUIInicial() {
     console.log("pokeIzq usa:", equipoIzquierdoBase[3]);
     pokeIzq.src = equipoIzquierdoBase[3].img;
     pokeIzq.dataset.name = equipoIzquierdoBase[3].nombre;
-    pokeIzq.classList.remove("poke-muerto");
+    pokeIzq.classList.remove("pokemon-muerto");
     pokeIzq.style.visibility = "visible";
   }
   if (pokeDer && equipoDerechoBase[3]) {
     console.log("pokeDer usa:", equipoDerechoBase[3]);
     pokeDer.src = equipoDerechoBase[3].img;
     pokeDer.dataset.name = equipoDerechoBase[3].nombre;
-    pokeDer.classList.remove("poke-muerto");
+    pokeDer.classList.remove("pokemon-muerto");
     pokeDer.style.visibility = "visible";
   }
 
@@ -206,9 +206,9 @@ function actualizarBarraPorLado(lado) {
   if (!p) return;
 
   if (lado === "izquierda") {
-    actualizarBarra(p, ".hud.izquierda .life-fill");
+    actualizarBarra(p, ".interfaz.izquierda .vida-relleno");
   } else {
-    actualizarBarra(p, ".hud.derecha .life-fill");
+    actualizarBarra(p, ".interfaz.derecha .vida-relleno");
   }
 }
 
@@ -318,14 +318,14 @@ function mostrarToastVictoria(ganadorTexto) {
   cont.innerHTML = "";
 
   const div = document.createElement("div");
-  div.className = "death-toast";
+  div.className = "muerte-notif";
   div.innerHTML =
     "<div><strong>" +
     ganadorTexto +
     "</strong></div>" +
     "<div>Todos los Pokémon del rival se han debilitado.</div>" +
     '<div style="margin-top:10px; text-align:center;">' +
-    '<button id="btnRestart" class="retro-btn">RESTART</button>' +
+    '<button id="btnRestart" class="boton-retro">RESTART</button>' +
     "</div>";
 
   cont.appendChild(div);
@@ -352,11 +352,11 @@ function reiniciarPartida() {
   const pokeIzq = document.getElementById("pokeizquierda");
   const pokeDer = document.getElementById("pokederecha");
   if (pokeIzq) {
-    pokeIzq.classList.remove("poke-muerto");
+    pokeIzq.classList.remove("pokemon-muerto");
     pokeIzq.style.visibility = "visible";
   }
   if (pokeDer) {
-    pokeDer.classList.remove("poke-muerto");
+    pokeDer.classList.remove("pokemon-muerto");
     pokeDer.style.visibility = "visible";
   }
 }
@@ -395,7 +395,7 @@ function cambiarPokemon(event) {
 
   // Reset visual por si el que entra estaba marcado como muerto
   // me fallaba que todos se veía muerto, solucionar problema
-  imgFuera.classList.remove("poke-muerto");
+  imgFuera.classList.remove("pokemon-muerto");
   imgFuera.style.visibility = "visible";
 
   actualizarBarraPorLado(lado);
@@ -455,16 +455,16 @@ function atacar() {
     defensorEl.id === "pokederecha" ? "derecha" : "izquierda";
 
   if (ladoDefensor === "derecha") {
-    actualizarBarra(defensor, ".hud.derecha .life-fill");
+    actualizarBarra(defensor, ".interfaz.derecha .vida-relleno");
   } else {
-    actualizarBarra(defensor, ".hud.izquierda .life-fill");
+    actualizarBarra(defensor, ".interfaz.izquierda .vida-relleno");
   }
 
   if (defensor.vidaRestante <= 0) {
     mostrarToastMuerte(defensor.nombre, ladoDefensor);
 
     // Animación de muerte: parpadeo + desaparición
-    defensorEl.classList.add("poke-muerto");
+    defensorEl.classList.add("pokemon-muerto");
     defensorEl.addEventListener(
       "animationend",
       () => {

@@ -12,18 +12,18 @@
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   </head>
   <body>
-    <div class="death-toast-container" id="deathToastContainer"></div>
+    <div class="muerte-notif-contenedor" id="deathToastContainer"></div>
 
-    <main class="battle">
+    <main class="batalla">
       <div class="elegir">
         <img class="eleccion" src="" alt="poke1" data-name="" />
         <img class="eleccion" src="" alt="poke2" data-name="" />
         <img class="eleccion" src="" alt="poke3" data-name="" />
       </div>
 
-      <div class="hud izquierda">
-        <div class="life">
-          <div class="life-fill"></div>
+      <div class="interfaz izquierda">
+        <div class="vida">
+          <div class="vida-relleno"></div>
         </div>
       </div>
 
@@ -33,15 +33,15 @@
         <img class="eleccion" src="" alt="poke6" data-name="" />
       </div>
 
-      <div class="hud derecha">
-        <div class="life">
-          <div class="life-fill"></div>
+      <div class="interfaz derecha">
+        <div class="vida">
+          <div class="vida-relleno"></div>
         </div>
       </div>
 
       <img
         id="pokeizquierda"
-        class="poke izquierda"
+        class="pokemon izquierda"
         src=""
         alt="poke-izq"
         data-name=""
@@ -49,13 +49,13 @@
 
       <img
         id="pokederecha"
-        class="poke derecha"
+        class="pokemon derecha"
         src=""
         alt="poke-der"
         data-name=""
       />
 
-      <button id="boton" class="attack">ATTACK</button>
+      <button id="boton" class="ataque">ATTACK</button>
     </main>
 
     <script src="pokemon_supabase.js"></script>

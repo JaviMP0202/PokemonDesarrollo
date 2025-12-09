@@ -13,7 +13,7 @@ function mostrarToastLogin(htmlMensaje) {
   }
   cont.innerHTML = "";
   const div = document.createElement("div");
-  div.className = "death-toast";
+  div.className = "muerte-notif";
   div.innerHTML = htmlMensaje;
   cont.appendChild(div);
 }

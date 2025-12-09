@@ -12,32 +12,32 @@
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   </head>
   <body>
-    <div class="login-bg">
-      <div class="login-card">
-        <h1 class="login-title">PoKeMoN LOGIN</h1>
+    <div class="login-fondo">
+      <div class="login-tarjeta">
+        <h1 class="login-titulo">PoKeMoN LOGIN</h1>
         <form id="loginForm">
-          <label class="login-label">
+          <label class="login-etiqueta">
             Email
-            <input type="email" id="email" required class="login-input" />
+            <input type="email" id="email" required class="login-campo" />
           </label>
 
-          <label class="login-label">
+          <label class="login-etiqueta">
             Password
             <input
               type="password"
               id="password"
               minlength="6"
               required
-              class="login-input"
+              class="login-campo"
             />
           </label>
 
-          <div class="login-buttons">
-            <button type="submit" id="btnLogin" class="retro-btn">LOGIN</button>
+          <div class="login-botones">
+            <button type="submit" id="btnLogin" class="boton-retro">LOGIN</button>
             <button
               type="button"
               id="btnSignup"
-              class="retro-btn retro-btn-sec"
+              class="boton-retro boton-retro-sec"
             >
               SIGN UP
             </button>
@@ -45,7 +45,7 @@
         </form>
       </div>
 
-      <div class="death-toast-container" id="loginToastContainer"></div>
+      <div class="muerte-notif-contenedor" id="loginToastContainer"></div>
     </div>
 
     <script src="login.js"></script>
