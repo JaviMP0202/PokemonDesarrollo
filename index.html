@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Login Pokémon</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="login.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  </head>
+  <body>
+    <div class="login-bg">
+      <div class="login-card">
+        <h1 class="login-title">PoKeMoN LOGIN</h1>
+        <form id="loginForm">
+          <label class="login-label">
+            Email
+            <input type="email" id="email" required class="login-input" />
+          </label>
+
+          <label class="login-label">
+            Password
+            <input
+              type="password"
+              id="password"
+              minlength="6"
+              required
+              class="login-input"
+            />
+          </label>
+
+          <div class="login-buttons">
+            <button type="submit" id="btnLogin" class="retro-btn">LOGIN</button>
+            <button
+              type="button"
+              id="btnSignup"
+              class="retro-btn retro-btn-sec"
+            >
+              SIGN UP
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div class="death-toast-container" id="loginToastContainer"></div>
+    </div>
+
+    <script src="login.js"></script>
+  </body>
+</html>

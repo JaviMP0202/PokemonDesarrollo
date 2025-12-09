@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Batalla</title>
+    <link rel="stylesheet" href="style2.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  </head>
+  <body>
+    <div class="death-toast-container" id="deathToastContainer"></div>
+
+    <main class="battle">
+      <div class="elegir">
+        <img class="eleccion" src="" alt="poke1" data-name="" />
+        <img class="eleccion" src="" alt="poke2" data-name="" />
+        <img class="eleccion" src="" alt="poke3" data-name="" />
+      </div>
+
+      <div class="hud izquierda">
+        <div class="life">
+          <div class="life-fill"></div>
+        </div>
+      </div>
+
+      <div class="elegir2">
+        <img class="eleccion" src="" alt="poke4" data-name="" />
+        <img class="eleccion" src="" alt="poke5" data-name="" />
+        <img class="eleccion" src="" alt="poke6" data-name="" />
+      </div>
+
+      <div class="hud derecha">
+        <div class="life">
+          <div class="life-fill"></div>
+        </div>
+      </div>
+
+      <img
+        id="pokeizquierda"
+        class="poke izquierda"
+        src=""
+        alt="poke-izq"
+        data-name=""
+      />
+
+      <img
+        id="pokederecha"
+        class="poke derecha"
+        src=""
+        alt="poke-der"
+        data-name=""
+      />
+
+      <button id="boton" class="attack">ATTACK</button>
+    </main>
+
+    <script src="pokemon_supabase.js"></script>
+  </body>
+</html>

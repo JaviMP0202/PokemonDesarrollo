@@ -1,0 +1,126 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: system-ui, Arial, sans-serif;
+}
+
+.login-bg {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("./img/fondo.png") no-repeat center center;
+  background-size: cover;
+}
+
+.login-card {
+  background: rgba(249, 245, 215, 0.95);
+  border: 4px solid #000;
+  border-radius: 12px 0 12px 0;
+  padding: 24px 28px;
+  box-shadow: 6px 6px 0 #000;
+  min-width: 280px;
+  max-width: 360px;
+}
+
+.login-title {
+  font-family: "Press Start 2P", system-ui, sans-serif;
+  font-size: 14px;
+  text-align: center;
+  margin: 0 0 18px;
+}
+
+.login-label {
+  display: block;
+  font-family: "Press Start 2P", system-ui, sans-serif;
+  font-size: 9px;
+  margin-bottom: 12px;
+}
+
+.login-input {
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 2px solid #000;
+  font-size: 12px;
+  font-family: system-ui, sans-serif;
+}
+
+.login-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+/* Botón retro igual que el RESTART del juego */
+.retro-btn {
+  flex: 1;
+  padding: 8px 10px;
+  border: 3px solid #000;
+  border-radius: 8px;
+  background: linear-gradient(#4ade80, #16a34a);
+  box-shadow: 3px 3px 0 #000;
+  font-family: "Press Start 2P", system-ui, sans-serif;
+  font-size: 9px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.retro-btn-sec {
+  background: linear-gradient(#60a5fa, #2563eb);
+}
+
+.retro-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 #000;
+}
+
+/* Toast retro reutilizando estilo del juego */
+.death-toast-container {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 40px;
+  z-index: 999;
+}
+
+.death-toast {
+  min-width: 260px;
+  padding: 10px 18px;
+  border-radius: 12px 0 12px 0;
+  border: 3px solid #000;
+  background: linear-gradient(#f9f5d7, #e0d4b0);
+  box-shadow: 4px 4px 0 #000;
+  font-family: "Press Start 2P", system-ui, sans-serif;
+  font-size: 10px;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  pointer-events: auto;
+  animation: death-toast-in 0.2s ease-out;
+}
+
+.death-toast strong {
+  color: #b91c1c;
+}
+
+@keyframes death-toast-in {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
