@@ -239,7 +239,7 @@ body {
   }
 }
 
-/* Animación de muerte de Pokémon */
+
 @keyframes pokemon-muerte-parpadeo {
   0% {
     opacity: 1;
